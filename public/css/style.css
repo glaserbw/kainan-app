@@ -1,7 +1,11 @@
-h3 {
-	color: green;
+h4 {
+	color: #e18902;
 }
 
 #search-bar {
 	margin-top: 20%;
+}
+
+.navbar {
+	background-color: #ccb216;
 }
