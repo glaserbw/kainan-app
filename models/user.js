@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       validate: {
         isEmail: {
-          msg: 'Hey! Give me a valid email, loser.'
+          msg: 'Hey! Give me a valid email!'
         }
       }
     },
@@ -22,18 +22,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    dob: DataTypes.DATE,
-    admin: DataTypes.BOOLEAN,
     facebookId: DataTypes.STRING,
-    facebookToken: DataTypes.STRING, 
-    image: {
-      type: DataTypes.STRING,
-      validate: {
-        isUrl: {
-          msg: 'No pic - you were ugly anyway'
-        }
-      }
-    }
+    facebookToken: DataTypes.STRING
   }, {
     hooks: {
       beforeCreate: function(pendingUser){

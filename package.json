@@ -1,8 +1,8 @@
 {
-  "name": "auth-boilerplate",
+  "name": "project2",
   "version": "1.0.0",
-  "description": "Boilerplate for future use",
-  "repository": "https://github.com/glaserbw/auth-boiler",
+  "description": "project2-app full stack express",
+  "repository": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
