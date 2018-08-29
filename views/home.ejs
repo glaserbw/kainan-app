@@ -1,9 +1,11 @@
 
 <div id="search-bar">
-	<h4>The world's premiere nacho search</h4>
-	<div class="input-field col s12">
-		<i class="material-icons prefix">search</i>
-		<input type="text" id="autocomplete-input" class="autocomplete">
-		<label for="autocomplete-input">Where?</label>
-	</div>
+	<h4>Find restaurants serving nachos near you...</h4>
+	<form action="/nachos" method="GET">
+		<div class="input-field col s12">
+			<i class="material-icons prefix">search</i>
+			<input type="text" id="autocomplete-input" class="autocomplete">
+			<label for="autocomplete-input">city/state/zip</label>
+		</div>
+	</form>
 </div>
