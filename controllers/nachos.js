@@ -3,8 +3,6 @@ var express = require('express');
 var request = require('request');
 var router = express.Router();
 
-
-
 // Get the authorization helper function
 var loggedIn = require('../middleware/loggedIn'); 
 
@@ -18,10 +16,10 @@ router.post('/', loggedIn, function(req, res){
 	request(searchUrl, function(error, response, body) {
 			console.log('body is: ', body)
 
-	// 	res.render('nachos/index')
-	// 	// console.log('search is: ', req.body)
+		res.render('nachos/index')
 	}); 
 }); 
 
 
 module.exports = router; 
+
