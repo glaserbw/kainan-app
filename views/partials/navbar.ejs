@@ -1,7 +1,7 @@
   <nav class="navbar">
     <div class="nav-wrapper">
       <a href="/" class="brand-logo">Kainan</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right">
         <% if(currentUser){%>
         <li><a href="/profile">Nacho Hitlist</a></li>
 <!--         <li><a href="/nachos">Nachos</a></li> -->
@@ -9,7 +9,7 @@
         <%} else{ %>
         <li><a href="/auth/login">Login</a></li>
         <li><a href="/auth/signup">Sign Up</a></li>
-        <%}%>       
+        <%}%>
       </ul>
     </div>
   </nav>
