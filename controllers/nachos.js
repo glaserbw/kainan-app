@@ -43,7 +43,7 @@ var citySearch = function(cityId){
 
 module.exports = router; 
 
-// &q=dish-pizza added in URL before api key in citySearch function
+// &q=dish-nachos added in URL before api key in citySearch function
 
 
 
