@@ -1,10 +1,16 @@
-<h4>Nacho Search Results</h4>
+<h4>Restaurant Results</h4>
 
 
 
 <% restaurants.forEach(function (elem) {%>
+<div class="container" id='search-results'>
 
-	<h3><%= elem.restaurant.name %> </h3>
+	<h4><%= elem.restaurant.name %> </h4>
+	<p>Address: <%= elem.restaurant.location.address %> </p>
+	<p>Neighborhood: <%= elem.restaurant.location.locality %> </p>
+	<a href='<%=elem.restaurant.menu_url%>' target='_blank'>Menu</a>
+
+</div>	
 
 <%});%>
 

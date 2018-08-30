@@ -1,5 +1,5 @@
 h4 {
-	color: #e18902;
+	color: #0038A8;
 }
 
 #search-bar {
@@ -7,5 +7,13 @@ h4 {
 }
 
 .navbar {
-	background-color: #ccb216;
+	background-color: #fcd116;
+}
+
+#search-results {
+	border-radius: 25px;
+    border: 2px solid #fcd116;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px; 
 }
