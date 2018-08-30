@@ -6,7 +6,7 @@ var router = express.Router();
 // Get the authorization helper function
 var loggedIn = require('../middleware/loggedIn');
 
-// Define routes
+// ROUTE TO GET SEARCH RESULTS FROM HOMEPAGE QUERY 
 router.post('/', loggedIn, function(req, res){
   // Accept: alphanumeric, underscore, comma, whitespace
 	var searchQuery = req.body.search.replace(/[^\w\,\s]/g, '');
@@ -18,13 +18,24 @@ router.post('/', loggedIn, function(req, res){
     var resultUrl = 'https://developers.zomato.com/api/v2.1/search?entity_id=' + cityId + '&entity_type=city&cuisines=112' + '&apikey=' + process.env.API_KEY;
     request(resultUrl, function(error, response, body){
       var restaurantList = JSON.parse(body);
-      res.render('nachos/index', {
+      res.render('restaurants/index', {
         restaurants: restaurantList.restaurants,
         name: "Taylor" // ex. here to remind me of value pair relationships
       });
     });
 	});
 });
+
+// ROUTES TO PLACE AND GET FAVORITED RESTAURANTS 
+router.post('restaurants/index', loggedIn, function(req, res){
+// post route to add from results page to the favorites page
+  res.render('profile/index'); 
+})
+
+router.get('restaurants/index', loggedIn, function(req, res){
+// route to display results to the favorites page (profile)
+  res.render('profile/index'); 
+})
 
 
 module.exports = router;

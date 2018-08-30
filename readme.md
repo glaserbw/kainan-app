@@ -1,4 +1,4 @@
-# Nacho NOW! 
+# Kainan - Filipino Restaurant Search and Save!  
 
 
 
