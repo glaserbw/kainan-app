@@ -28,7 +28,7 @@ router.post('/', loggedIn, function(req, res){
 
 // this function takes the users location search and reqests Nacho specific restaurant listings using their cityId
 var citySearch = function(cityId){
-	var resultUrl = 'https://developers.zomato.com/api/v2.1/search?entity_id=' + cityId + '&entity_type=city&q=dish-nacho' + '&apikey=' + process.env.API_KEY;
+	var resultUrl = 'https://developers.zomato.com/api/v2.1/search?entity_id=' + cityId + '&entity_type=city&cuisines=112' + '&apikey=' + process.env.API_KEY;
 	console.log(resultUrl);
 	request(resultUrl, function(error, response, body){
 		restaurantList = JSON.parse(body); 
@@ -42,6 +42,8 @@ var citySearch = function(cityId){
 
 
 module.exports = router; 
+
+// &q=dish-pizza added in URL before api key in citySearch function
 
 
 
