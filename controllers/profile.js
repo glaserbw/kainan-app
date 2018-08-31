@@ -25,7 +25,7 @@ router.get('/', loggedIn, function(req, res){
 
 // ROUTES TO PLACE AND GET FAVORITED RESTAURANTS 
 router.post('/', loggedIn, function(req, res){
-	console.log(req.body);
+	console.log('req.body is: ',req.body);
  	db.fav.findOrCreate({
  		where: {
  			resId: req.body.resId,
@@ -44,13 +44,14 @@ router.post('/', loggedIn, function(req, res){
  	});
 })
 
+
 // Below is route for DELETE
-router.delete("/:id", function(req, res){
-	console.log(req.params.id);
+router.delete("/", function(req, res){
+	console.log('req.params.id is: ',req.params.id);
 	db.fav.destroy({
 		where: {id: req.params.id}
 	}).then(function(deleteFav){
-		console.log("deleted:", deleteFav);
+		console.log("deleted: ", deleteFav);
 		res.send("successfully deleted");
 	}).catch(function(error){
 		console.log("error:", error);
@@ -59,6 +60,22 @@ router.delete("/:id", function(req, res){
 });
 
 
-
-
 module.exports = router; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
