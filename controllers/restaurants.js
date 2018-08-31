@@ -29,7 +29,6 @@ router.post('/', loggedIn, function(req, res){
 
 module.exports = router;
 
-// &q=dish-nachos added in URL before api key in citySearch function
 
 
 

@@ -18,7 +18,7 @@ router.get('/', loggedIn, function(req, res){
 	}).then(function(favorites){
 		res.render('profile/index', { favs: favorites });
 	}).catch(function(err){
-		console.log('nooooo', err);
+		res.render('404');
 	})
 }); 
 
@@ -39,29 +39,38 @@ router.post('/', loggedIn, function(req, res){
  		// Then, update the button via jquery to be not a plus sign
  	}).catch(function(err){
  		console.log('uh oh go boom', err);
- 		res.send('error - make a page for me');
+ 		res.render('404');
  		// Or, when you switch to AJAX, just an error message with res.send
  	});
 })
 
 // Below is route for DELETE
-router.delete("/:id", function(req, res){
+router.delete('/:id', function(req, res){
 	console.log('req.params.id is: ',req.params.id);
 	db.fav.destroy({
 		where: {id: req.params.id}
 	}).then(function(deleteFav){
-		console.log("deleted: ", deleteFav);
-		res.send("successfully deleted");
+		console.log('deleted: ', deleteFav);
+		res.send('successfully deleted');
 	}).catch(function(error){
-		console.log("error:", error);
-		res.send("did not delete");
+		console.log('error:', error);
+		res.render('404');
 	});
 });
 
-// route to get maps integrated
-router.get('/', loggedIn, function(req, res){
 
+// route to get maps integrated
+router.get('/map', loggedIn, function(req, res){
+	//need data from maps api i guess here 
+	// db.fav.findAll({
+	// 		where: { userId: req.user.id }
+
+	res.render('profile/map');
 }); 
+
+
+
+
 
 module.exports = router; 
 
