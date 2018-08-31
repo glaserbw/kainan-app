@@ -44,7 +44,6 @@ router.post('/', loggedIn, function(req, res){
  	});
 })
 
-
 // Below is route for DELETE
 router.delete("/:id", function(req, res){
 	console.log('req.params.id is: ',req.params.id);
@@ -59,6 +58,10 @@ router.delete("/:id", function(req, res){
 	});
 });
 
+// route to get maps integrated
+router.get('/', loggedIn, function(req, res){
+
+}); 
 
 module.exports = router; 
 
