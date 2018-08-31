@@ -1,11 +1,35 @@
-<h4><%= currentUser.firstname %>'s Hitlist</h4>
+<h4><%= currentUser.firstname %> <%= currentUser.lastname %>'s Hitlist</h4>
+<br>
+<br>
 
-<div class="row">
-<!-- 	<div class="col s3"></div>
-		<img src="<%=currentUser.image%>" class="responsive-img"> -->
+<!-- <div class="row">
+<div class="col s3"></div>
+		<img src="<%=currentUser.image%>" class="responsive-img"> 
 	<div class="col s3"></div>
-<!-- 		<p>First Name: <%= currentUser.firstname%></p>
-		<p>Last Name: <%= currentUser.lastname%></p> -->
-<!-- 		<p>Admin Status: <%= currentUser.admin ? 'yes' : 'no' %></p> -->
+		<p>First Name: <%= currentUser.firstname%></p>
+		<p>Last Name: <%= currentUser.lastname%></p> 
 	</div>
+</div> -->
+
+
+<% favs.forEach(function(elem){ %>
+
+<div class="container" id='search-results'>
+	
+	<form method="DELETE" action="profile">
+        <button id="delete-btn" class="btn btn-primary">X</button>
+	</form>
+
+	<h4> <%= elem.name %> </h4>
+	<p>Address: <%= elem.address %> </p>
+	<p>Neighborhood: <%= elem.locality %> </p>
+	<a href='<%= elem.menu %>' target='_blank'>Menu</a>
+
 </div>
+
+<% }); %>
+
+
+
+
+

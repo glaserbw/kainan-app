@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
   user.associate = function(models) {
-    // associations can be defined here
+    models.user.hasMany(models.fav); // user has many favorites - obvs 
   };
 
   user.prototype.isValidPassword = function(typedPassword){

@@ -26,17 +26,6 @@ router.post('/', loggedIn, function(req, res){
 	});
 });
 
-// ROUTES TO PLACE AND GET FAVORITED RESTAURANTS 
-router.post('restaurants/index', loggedIn, function(req, res){
-// post route to add from results page to the favorites page
-  res.render('profile/index'); 
-})
-
-router.get('restaurants/index', loggedIn, function(req, res){
-// route to display results to the favorites page (profile)
-  res.render('profile/index'); 
-})
-
 
 module.exports = router;
 

@@ -23,4 +23,15 @@ h4 {
 	float: right;
 	position: relative;
 	margin-right: 5px;
+	margin-top:5px;
+}
+
+#delete-btn {
+	border-radius: 25px;
+	float: right;
+	position: relative;
+	margin-right: 5px;
+	margin-top:5px;
+	background-color: red;
+	color: white;
 }
