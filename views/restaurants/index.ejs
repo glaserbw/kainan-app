@@ -4,7 +4,7 @@
 <% restaurants.forEach(function (elem) {%>
 <div class="container" id='search-results'>
 
-	<form method="POST" action="profile">
+	<form method="POST" action="profile" class="add-fav">
         <input type="hidden" name="name" value="<%= elem.restaurant.name %>">
         <input type="hidden" name="lat" value="<%= elem.restaurant.location.latitude %>">
         <input type="hidden" name="lng" value="<%= elem.restaurant.location.longitude %>">
@@ -12,7 +12,7 @@
         <input type="hidden" name="locality" value="<%= elem.restaurant.location.locality %>">
         <input type="hidden" name="menu" value="<%= elem.restaurant.menu_url %>">
         <input type="hidden" name="resId" value="<%= elem.restaurant.id %>">
-        <button id="fav-btn" class="btn btn-primary" type="submit">+</button>
+        <button class="btn btn-primary fav-btn" type="submit">+</button>
 	</form>
 
 	<h4><%= elem.restaurant.name %> </h4>

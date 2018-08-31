@@ -46,7 +46,7 @@ router.post('/', loggedIn, function(req, res){
 
 
 // Below is route for DELETE
-router.delete("/", function(req, res){
+router.delete("/:id", function(req, res){
 	console.log('req.params.id is: ',req.params.id);
 	db.fav.destroy({
 		where: {id: req.params.id}
