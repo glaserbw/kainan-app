@@ -1,13 +1,28 @@
 h4 {
+	font-family: 'Raleway', sans-serif;
 	color: #0038A8;
 }
+
 
 #search-bar {
 	margin-top: 20%;
 }
 
+
 .navbar {
-	background-color: #fcd116;
+	font-family: 'Raleway', sans-serif;
+	background-color: #0038A8;
+	/*background: linear-gradient(to right, white , red , blue);*/
+}
+
+body {	
+	background: url('/img/boodle-fight.jpg') no-repeat;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+}
+
+.brand-logo {
+	margin-left: 1%;
 }
 
 #search-results {
@@ -35,3 +50,5 @@ h4 {
 	background-color: red;
 	color: white;
 }
+
+

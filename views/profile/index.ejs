@@ -1,8 +1,31 @@
-<h4><%= currentUser.firstname %> <%= currentUser.lastname %>'s Hitlist</h4>
-	<form method="GET" action="/profile/map" class="map-form">
-        <button class="btn btn-primary" type="submit">Map it!</button>
-	</form>
-<br>
+<div class="container">
+	<h4><%= currentUser.firstname %> <%= currentUser.lastname %>'s Hitlist</h4>
+		<form method="GET" action="/profile/map" class="map-form">
+	        <button class="btn btn-primary" type="submit">Map it!</button>
+		</form>
+	<br>
+
+
+	<% favs.forEach(function(elem){ %>
+
+	<div class="container" id='search-results'>		
+		<form method="DELETE" action="/profile/<%=elem.id%>" class="delete-form">
+	        <button class="btn btn-primary delete-btn" type="submit">X</button>
+		</form>
+
+		<h4> <%= elem.name %> </h4>
+		<p>Address: <%= elem.address %> </p>
+		<p>Neighborhood: <%= elem.locality %> </p>
+		<a href='<%= elem.menu %>' target='_blank'>Menu</a>
+	</div>
+	<% }); %>
+</div>
+
+
+
+
+
+
 
 
 <!-- <div class="row">
@@ -13,24 +36,6 @@
 		<p>Last Name: <%= currentUser.lastname%></p> 
 	</div>
 </div> -->
-
-
-<% favs.forEach(function(elem){ %>
-
-<div class="container" id='search-results'>
-	
-	<form method="DELETE" action="/profile/<%=elem.id%>" class="delete-form">
-        <button class="btn btn-primary delete-btn" type="submit">X</button>
-	</form>
-
-	<h4> <%= elem.name %> </h4>
-	<p>Address: <%= elem.address %> </p>
-	<p>Neighborhood: <%= elem.locality %> </p>
-	<a href='<%= elem.menu %>' target='_blank'>Menu</a>
-	
-</div>
-
-<% }); %>
 
 
 
