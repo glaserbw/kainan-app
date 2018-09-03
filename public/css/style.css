@@ -5,20 +5,14 @@ h4 {
 
 
 #search-bar {
-	margin-top: 20%;
+	margin-top: 25%;
+	margin-bottom: 25%;
 }
-
 
 .navbar {
 	font-family: 'Raleway', sans-serif;
 	background-color: #0038A8;
 	/*background: linear-gradient(to right, white , red , blue);*/
-}
-
-body {	
-	background: url('/img/boodle-fight.jpg') no-repeat;
-	background-position: 50% 50%;
-	background-attachment: fixed;
 }
 
 .brand-logo {
@@ -51,4 +45,13 @@ body {
 	color: white;
 }
 
+
+body {	
+	
+
+/*	background: url('/img/boodle-fight.jpg') no-repeat;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	background-size: contain;*/
+}
 

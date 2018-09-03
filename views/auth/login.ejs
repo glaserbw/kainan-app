@@ -1,23 +1,26 @@
-<h4>Log in</h4>
 
-<form action="/auth/login" method="POST">
-	<div class="row">
-		<div class="input-field col s6 md6">
-			<label for="email">Email</label>
-			<input type="email" id="email" name="email" class="validate">
+
+<div class="container">
+	<h4>Log in</h4>
+	<form action="/auth/login" method="POST">
+		<div class="row">
+			<div class="input-field col s6 md6">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" class="validate">
+			</div>
+		<div class="input-field col s6 md12">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" class="validate">
+			</div>
 		</div>
-	<div class="input-field col s6 md12">
-			<label for="password">Password</label>
-			<input type="password" id="password" name="password" class="validate">
-		</div>
-	</div>
-	<input type="submit" class="btn btn-primary">
-</form>
+		<input type="submit" class="btn btn-primary">
+	</form>
 
-<br>
+	<br>
 
-<h4>Or...</h4>
-<p>Login with Facebook</p>
-<a href="/auth/facebook" class="btn white-text" style="background-color:#3B5998">
-	<i class="fa fa-facebook-official"></i> Login
-</a>
+	<h4>Or...</h4>
+	<p>Login with Facebook</p>
+	<a href="/auth/facebook" class="btn white-text" style="background-color:#3B5998">
+		<i class="fa fa-facebook-official"></i> Login
+	</a>
+</div>

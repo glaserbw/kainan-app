@@ -14,7 +14,7 @@ router.get('/login', function(req, res){
 }); 
 
 router.post('/login', passport.authenticate('local', {
-	successRedirect: '/profile',
+	successRedirect: '/',
 	successFlash: 'yay, login successful',
 	failureRedirect: '/auth/login',
 	failureFlash: 'Invalid Credentials'
@@ -34,15 +34,15 @@ router.post('/signup', function(req, res){
 		if(wasCreated){ //this is expected behavior 
 			// ToDo: Automatically log the user in! 
 			passport.authenticate('local', {
-				successRedirect: '/profile',
-				successFlash: 'Successfully logged in',
+				successRedirect: '/',
+				successFlash: 'Successfully Logged In',
 				failureRedirect: '/',
 				failureFlash: 'Oh no!'
 			})(req, res); 
 		}
 		else { // user messed up, they already have login 
 			// TODO: send the user some sort of error message 
-			req.flash('error', 'please login');
+			req.flash('error', 'Please Login');
 			res.redirect('/auth/login');
 		}
 	}).catch(function(err){
@@ -53,7 +53,7 @@ router.post('/signup', function(req, res){
 
 router.get('/logout', function(req, res){
 	req.logout();
-	req.flash('success', 'successfully logged out!');
+	req.flash('success', 'Successfully Logged Out!');
 	res.redirect('/');
 }); 
 
