@@ -9,25 +9,16 @@ nav ul li a{
 }    
 
 /*homepage / search formatting*/
-.homepage {
-	position: relative;
-	text-align: center;
-	color: white;
-}
-
-#homepage-img {
-	width: 100%;
-	max-width: 1000px;
-	height: auto;
-}
 
 .search-bar {
+	text-align: center;
 	font-size: 2vmin;
 	font-size: 2vmax;
-	color: white;
-	background-color: rgba(0,0,0,0.4);
-	margin-top: 25%;
+	margin-top: 20%;
 	margin-bottom: 25%;
+	color: #0038A8;
+	border-radius: 25px;
+    border: 2px solid #fcd116;
 }
 
 /*nav bar formatting*/
