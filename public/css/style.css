@@ -3,27 +3,46 @@ h4 {
 	color: #0038A8;
 }
 
-
-#search-bar {
-	margin-top: 25%;
-	margin-bottom: 25%;
-}
-
 /*text style below is redundant for now*/
 nav ul li a{
   color: white; 
 }    
 
+/*homepage / search formatting*/
+.homepage {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#homepage-img {
+	width: 100%;
+	max-width: 1000px;
+	height: auto;
+}
+
+.search-bar {
+	font-size: 2vmin;
+	font-size: 2vmax;
+	color: white;
+	background-color: rgba(0,0,0,0.4);
+	margin-top: 25%;
+	margin-bottom: 25%;
+}
+
+/*nav bar formatting*/
 .navbar {
 	font-family: 'Raleway', sans-serif;
 	background-color: #0038A8;
-	/*background: linear-gradient(to right, white , red , blue);*/
+	/*background: linear-gradient(to right, #ce1126 , #0038a8);*/
 }
 
 .brand-logo {
 	margin-left: 1%;
 }
 
+
+/*results page formatting*/
 #search-results {
 	border-radius: 25px;
     border: 2px solid #fcd116;
@@ -32,6 +51,7 @@ nav ul li a{
     margin-bottom: 10px; 
 }
 
+/*button formatting*/
 .fav-btn {
 	border-radius: 25px;
 	float: right;
@@ -51,12 +71,5 @@ nav ul li a{
 }
 
 
-body {	
-	
 
-/*	background: url('/img/boodle-fight.jpg') no-repeat;
-	background-position: 50% 50%;
-	background-attachment: fixed;
-	background-size: contain;*/
-}
 
