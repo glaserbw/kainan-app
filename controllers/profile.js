@@ -58,9 +58,18 @@ router.delete('/:id', function(req, res){
 	});
 });
 
+//GET EDIT PAGE - not working
 router.get('/edit/:id', loggedIn, function(req, res){
+	db.users.findOne({
+		where: { firstname: req.params.firstname,
+		lastname: req.params.lastname }
+	});
 	res.render('profile/edit');
 });
+
+router.put('/edit/:id', loggedIn, function(req, res){
+
+})
 
 
 // route to get maps integrated
