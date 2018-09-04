@@ -1,7 +1,10 @@
 <div class="container">
 	<h4><%= currentUser.firstname %> <%= currentUser.lastname %>'s Hitlist</h4>
+	<a href="/profile/edit/<%= currentUser.id%>" class="waves-effect waves-teal btn-flat">Edit Name</a>
+	<br>
+	<br>
 		<form method="GET" action="/profile/map" class="map-form">
-	        <button class="btn btn-primary" type="submit">Map it!</button>
+	        <button class="btn btn-primary" type="submit">Map Favorites!</button>
 		</form>
 	<br>
 

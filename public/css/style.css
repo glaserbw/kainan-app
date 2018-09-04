@@ -19,6 +19,7 @@ nav ul li a{
 	color: #0038A8;
 	border-radius: 25px;
     border: 2px solid #fcd116;
+    background-color: rgba(211,211,211,.5);
 }
 
 /*nav bar formatting*/
@@ -30,6 +31,10 @@ nav ul li a{
 
 .brand-logo {
 	margin-left: 1%;
+}
+
+.page-footer {
+	margin-top: 5%;
 }
 
 

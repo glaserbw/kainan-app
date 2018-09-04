@@ -44,7 +44,7 @@ router.post('/', loggedIn, function(req, res){
  	});
 })
 
-// Below is route for DELETE
+// Below is route for DELETE favorited restaurants
 router.delete('/:id', function(req, res){
 	console.log('req.params.id is: ',req.params.id);
 	db.fav.destroy({
@@ -56,6 +56,10 @@ router.delete('/:id', function(req, res){
 		console.log('error:', error);
 		res.render('404');
 	});
+});
+
+router.get('/edit/:id', loggedIn, function(req, res){
+	res.render('profile/edit');
 });
 
 
